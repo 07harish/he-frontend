@@ -1,0 +1,45 @@
+.ItemsList-headerNav {
+  background-color: red;
+}
+
+.ItemsList{
+    margin: 10px;
+    padding: 2px;
+}
+
+.ItemsList-item{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* LIST.js css  */
+.List-container {
+  margin: 10px;
+  padding: 2px;
+}
+.List-container > span{
+  margin: 8px;
+}
+
+.List-items {
+  border: 1px solid gray;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.List-qty {
+  width: 30%;
+}
+
+.List-price{
+    width: 20%;
+}
+
+.List-items-cancel {
+  margin: 10px;
+}
+.List-items-name {
+  margin-left: 10px;
+}

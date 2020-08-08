@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import ItemsList from './Components/ItemsList/ItemsList'
+import OrderTotal from './Components/OrderTotal/OrderTotal'
 
-function App() {
+function App () {
+  const [totalDetails, settotalDetails] = React.useState(null)
+
+  const getDetails = details => {
+    settotalDetails(details)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div>&#60; Order Details</div>
+      <div className='App-Conatiner'>
+        <div className='App-itemsList'>
+          <ItemsList sendDetails={getDetails}></ItemsList>
+        </div>
+        <div className='App-totalDetails'>
+          <OrderTotal totalDetails={totalDetails}></OrderTotal>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
